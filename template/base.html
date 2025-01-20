@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="menu-lateral">
+            {% include 'menu.html' %}
+        </div>
+        <div class="conteudo">
+            {% block conteudo %}
+            <!-- O conteúdo específico da página será inserido aqui -->
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

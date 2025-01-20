@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+   
+<header>
+        <h1>Produtos</h1>
+    </header>
+    <main>
+        <h2>Conheça nossos produtos:</h2>
+        <div>
+            {% for produto in produtos %}
+                <h3>{{ produto.nome }}</h3>
+                <img src="../static/img/{{produto.imagem}}">
+                <p>{{ produto.descricao }}</p>
+                <p>Preço: {{ produto.preco }}</p>
+                <hr>
+            {% endfor %}
+        </div>
+    </main>
+    
+{% endblock %}

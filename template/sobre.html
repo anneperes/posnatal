@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <header>
+        <h1>Sobre o Projeto</h1>
+    </header>
+    <main>
+        <h2>Nosso projeto é desenvolvido por:</h2>
+        <div>
+            {% for membro in membros %}
+                <h3>{{ membro.nome }}</h3>
+                <img src="../static/img/{{membro.foto}}"> alt="Foto de {{ membro.nome }}" width="200">
+                <p>{{ membro.descricao }}</p>
+                <hr>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
